@@ -1,7 +1,9 @@
 # Require some libs
 library(reshape2)
 library(plyr)
+library(dplyr)
 library(ggplot2)
+library(ggmap)
 
 # Set working directory
 setwd("~/Documents/2018/Article R/02")
@@ -9,6 +11,7 @@ setwd("~/Documents/2018/Article R/02")
 
 # Get data from ARPA Lazio
 # set the url and curl call for the file
+# this file has geoloc of stations http://www.arpalazio.net/main/aria/doc/RQA/locRQA.txt
 fileurl <- "http://www.arpalazio.net/main/aria/sci/basedati/chimici/BDchimici/RM/DatiOrari/RM_PM10_2017.txt"
 thecall <- paste("curl '", fileurl, "' -o RM_PM10_2017.txt", sep = "")
 # get it
@@ -27,6 +30,13 @@ PM10_raw <- read.csv("RM_PM10_2017.txt", sep = "")
 # let's change the column names to something meaningful
 # load stations names in data frame for lookup from local csv file created from pdf available online
 stations_df <- read.csv("stations.csv")
+# plot stations
+bbox <- make_bbox(range(stations_df$Longitude, na.rm = TRUE),range(stations_df$Latitude, na.rm = TRUE), f = 0.05)
+thestationsmap <- get_map(bbox)
+jpeg("./thestationsmap.jpg", width = 1024, height = 1024)
+thestationsmapplot <- ggmap(thestationsmap) + geom_point(aes(x = Longitude, y = Latitude), data = stations_df, col = "red")
+thestationsmapplot
+dev.off()
 # get station codes from factors of the raw data
 stations_hd <- data.frame(Station.Code = names(PM10_raw)[3:length(names(PM10_raw))])
 # perform lookup of stations names and set them im raw data
@@ -44,7 +54,15 @@ PM10_tidy <- melt(PM10_raw, id.vars = c("day", "hour"), variable.name = "station
 PM10_tidy$PM10level[PM10_tidy$PM10level == -999] <- NA
 
 # Show values for stations
-ggplot(PM10_tidy, aes(station, PM10level)) + geom_boxplot()
+jpeg("./pm10onstations2017.jpg", width = 1024, height = 1024)
+ggplot(PM10_tidy, aes(station, PM10level)) + geom_boxplot(fill = "red") + theme_bw()
+dev.off()
 
-# Show values for stations
-ggplot(PM10_tidy, aes(hour, PM10level)) + geom_point() + geom_smooth()
+# Show mean PM10 levels throughout the year
+PM10_mean <- PM10_tidy %>%
+  group_by(day) %>%
+  summarise(PM10mean = mean(PM10level, na.rm = TRUE))
+
+jpeg("./pm10mean2017.jpg", width = 1024, height = 1024)
+ggplot(data = PM10_mean, aes(x = day, y = PM10mean)) + geom_area( fill = "red" ) + theme_bw() 
+dev.off()
