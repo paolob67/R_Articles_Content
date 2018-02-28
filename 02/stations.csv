@@ -1,64 +1,64 @@
-Station Name,Station Code
-Arenula vecchia,X1
-Preneste,X2
-Francia,X3
-Fermi vecchia,X4
-Magna Grecia,X5
-Libia,X6
-Montezemolo,X7
-Cinecitta,X8
-Tiburtina vecchia,X9
-Colleferro Oberdan,X10
-Colleferro Europa,X11
-Pomezia,X13
-Allumiere,X14
-Civitavecchia,X15
-Guidonia,X16
-Segni,X38
-Ada,X39
-Guido,X40
-Cavaliere,X41
-Ciampino,X45
-Fermi,X47
-Bufalotta,X48
-Cipro,X49
-Tiburtina,X55
-Arenula,X56
-Malagrotta,X57
-Civitavecchia Porto,X60
-CV-Villa Albani,X83
-CV-Via Morandi,X84
-CV-Via Roma,X85
-Fiumicino Porto,X86
-Fiumicino Villa Guglielmi,X87
-Ceccano,X27
-Ferentino,X28
-Anagni,X29
-Alatri,X35
-Fontechiari,X36
-Cassino,X52
-Frosinone scalo,X62
-Mazzini,X71
-LT-Romagnoli,X19
-LT-Tasso,X20
-Aprilia 2,X23
-Cisterna,X34
-Latina scalo,X51
-Gaeta Porto,X61
-LT-De Chirico,X63
-Rieti 1,X17
-Leonessa,X37
-Civita Castellana,X30
-Viterbo,X32
-Acquapendente,X59
-Civita Castellana Petrarca,X90
-Aurelia,X101
-S. Agostino,X102
-Fiumaretta,X103
-Faro,X104
-Campo Oro,X105
-S. Gordiano,X106
-Allumiere - V. Aldo Moro,X107
-Tolfa,X108
-Tarquinia,X110
-Monte Romano,X111
+Station Name,Station Code,Latitude,Longitude
+Arenula,X1,41.894020,12.475368
+Preneste,X2,41.886018,12.541614
+Francia,X3,41.947447,12.469588
+Fermi,X4,41.864194,12.469531
+Magna Grecia,X5,41.883064,12.508939
+Libia,X6,NA,NA
+Montezemolo,X7,NA,NA
+Cinecitta,X8,41.857720,12.568665
+Tiburtina,X9,41.910257,12.548870
+Colleferro-Oberdan,X10,41.730840,13.004350	
+Colleferro-Europa,X11,41.725010,13.009575
+Pomezia,X13,NA,NA
+Allumiere,X14,42.160972,11.900022
+Civitavecchia,X15,42.091629,11.802466
+Guidonia,X16,41.995679,12.726371
+Segni,X38,NA,NA
+Villa Ada,X39,41.932874,12.506971
+Castel di Guido,X40,41.889438,12.266300
+Cavaliere,X41,41.929383,12.658363
+Ciampino,X45,41.797880,12.607033
+Fermi,X47,41.864194,12.469531
+Bufalotta,X48,41.947649,12.533682
+Cipro,X49,41.906358,12.447596
+Tiburtina,X55,41.910257,12.548870
+Arenula,X56,41.894020,12.475368
+Malagrotta,X57,41.874894,12.345598
+CV-Porto,X60,42.097053,11.788354
+CV-Villa Albani,X83,42.099363,11.798061
+CV-Morandi,X84,42.086803,11.806498
+CV-Roma,X85,42.094147,11.795509
+Fiumicino Porto,X86,41.774849,12.223413	
+Fiumicino Villa Guglielmi,X87,41.768189,12.237048
+Ceccano,X27,41.570000,13.337190
+Ferentino,X28,41.690000,13.250411
+Anagni,X29,41.750000,13.149685
+Alatri,X35,41.730000,13.338333
+Fontechiari,X36,41.670000,13.674472	
+Cassino,X52,41.490000,13.830690
+FR-scalo,X62,41.620000,13.330810
+FR-Mazzini,X71,41.639666,13.348913
+LT-Romagnoli,X19,NA,NA
+LT-Tasso,X20,41.464025,12.913039
+Aprilia 2,X23,41.595344,12.653581
+Cisterna,X34,NA,NA
+LT-scalo,X51,41.531431,12.946064 
+Gaeta Porto,X61,41.223074,13.570481
+LT-De Chirico,X63,41.451131,12.891731
+Rieti 1,X17,42.404093,12.858224
+Leonessa,X37,42.572593,12.961982
+Civita Castellana,X30,42.301800,12.413200
+Viterbo,X32,42.422058,12.109125
+Acquapendente,X59,42.736649,11.876578
+Civita Castellana Petrarca,X90,NA,NA
+Aurelia,X101,42.137344,11.793163
+S. Agostino,X102,42.159947,11.742631
+Fiumaretta,X103,42.102158,11.784358
+Faro,X104,42.098903,11.817692
+Campo Oro,X105,42.081825,11.809336
+S. Gordiano,X106,42.073608,11.815916
+Allumiere-Moro,X107,42.160972,11.900022
+Tolfa,X108,42.152227,11.935830
+Tarquinia,X110,42.240389,11.766344
+Monte Romano,X111,42.268561,11.910914
